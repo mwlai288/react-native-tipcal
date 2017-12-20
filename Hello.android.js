@@ -5,7 +5,7 @@ export default class Hello extends React.Component {
   render() {
     return(
       <View>
-        <Text style={styles.hello}>Hello from Hello.JS</Text>
+        <Text style={styles.hello}>Hello from Android!</Text>
       </View>
     )
   }
@@ -13,7 +13,7 @@ export default class Hello extends React.Component {
  
 const styles = StyleSheet.create({
   hello:{
-    backgroundColor: '#00FF00',
+    backgroundColor: '#F0FF00',
     fontSize: 24
   }
 });
