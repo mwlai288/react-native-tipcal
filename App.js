@@ -10,8 +10,8 @@ import Values from './ui/Values';
 export default class App extends React.Component {
   state = {
     inputValue: "",
-    tip: 0.2,
-    isReady: false
+    tip: 0.15,
+    isReady: false,
   }
 
   async componentWillMount() {
@@ -52,6 +52,8 @@ export default class App extends React.Component {
               style={styles.input}
               keyboardType='numeric'
               placeholder='0.00'
+              underlineColorAndroid = '#FFF'
+              placeholderTextColor="#FFF"
               onChangeText={(text) => this.setState({inputValue: text})}
             />
             <View style={styles.buttonGroup}>
@@ -60,22 +62,22 @@ export default class App extends React.Component {
               onPress={() => this.setState({tip: 0.1})}
             />
             <Button 
-              title='15%'
-              onPress={() => this.setState({tip: 0.15})}
+              title='18%'
+              onPress={() => this.setState({tip: 0.18})}
             />
             <Button 
               title='20%'
               onPress={() => this.setState({tip: 0.2})}
             />
-            <TextInput 
+           <TextInput 
               value={(this.state.tip * 100).toString()}
               style={styles.customTip}
               keyboardType='numeric'
-              placeholder='Custom'
-              underlineColorAndroid = '#FFF'
-              placeholderTextColor =  '#FFF'
+              placeholder='25%'
+              underlineColorAndroid= '#FFF'
+              placeholderTextColor="#FFF"
               onChangeText={(customTip) => this.updateCustomTip(customTip)}
-            />
+            /> 
             </View>
           </View>
         </Content>
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   inputs: {
-    backgroundColor: '#212121',
+    backgroundColor: '#A2870B',
     padding: 20,
   },
   input: {
@@ -108,6 +110,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   customTip: {
+    color: '#FFF',
     height: 40,
     width: 60,
     padding: 5,
